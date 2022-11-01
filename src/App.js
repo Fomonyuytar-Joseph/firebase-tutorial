@@ -57,13 +57,13 @@ function App() {
       <button onClick={createUser}>Create User</button>
       {users.map((user) => {
         return (
-          <div>
+          <div key={user.id}>
             <h1>Name:{user.name}</h1>
             <h1>Age:{user.age}</h1>
             <button onClick={() => updateUser(user.id, user.age)}>
               Increase Age
             </button>
-            <button onClick={deleteUser(user.id )}>
+            <button onClick={()=>deleteUser(user.id )}>
               Delete User
             </button>
           </div>
